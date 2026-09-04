@@ -12,6 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://farashacrp.com"),
   title: "FarashaCRP | Clinical Research Staffing That's Actually Run Trials",
   description:
     "FarashaCRP places vetted CRAs, CTMs, and CTAs with sponsors and CROs — and matches clinical research professionals with roles that fit. Founded by a 13-year clinical ops veteran.",
