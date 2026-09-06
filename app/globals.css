@@ -51,4 +51,58 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  /* Bespoke SaaS Card & Button Micro-Interactions */
+  .card-lift {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+  }
+  .card-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px -10px rgba(11, 28, 51, 0.08), 0 10px 15px -5px rgba(11, 28, 51, 0.04);
+  }
+
+  .card-lift-dark {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+  }
+  .card-lift-dark:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 35px -12px rgba(20, 184, 166, 0.15), 0 0 1px 1px rgba(45, 212, 191, 0.2);
+  }
+
+  .btn-press {
+    transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), filter 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn-press:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+  }
+  .btn-press:active {
+    transform: scale(0.98) translateY(1px);
+    filter: brightness(0.98);
+  }
+
+  .btn-shimmer-wrap {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-shimmer-wrap::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(25deg);
+    pointer-events: none;
+    transition: none;
+  }
+  .btn-shimmer-wrap:hover::after {
+    animation: shimmer 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
 }

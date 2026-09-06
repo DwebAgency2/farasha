@@ -40,6 +40,34 @@ const config: Config = {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
         serif: ["var(--font-merriweather)", "Georgia", "serif"],
       },
+      keyframes: {
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-6px)" },
+        },
+        "float-slow": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        shimmer: {
+          "100%": { transform: "translateX(100%)" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { opacity: "0.6", transform: "scale(1)" },
+          "50%": { opacity: "1", transform: "scale(1.08)" },
+        },
+        "radar-ping": {
+          "75%, 100%": { transform: "scale(2)", opacity: "0" },
+        },
+      },
+      animation: {
+        float: "float 4s ease-in-out infinite",
+        "float-slow": "float-slow 6s ease-in-out infinite",
+        "float-delayed": "float 5s ease-in-out 2s infinite",
+        shimmer: "shimmer 2.5s infinite",
+        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
+        "radar-ping": "radar-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite",
+      },
     },
   },
   plugins: [],

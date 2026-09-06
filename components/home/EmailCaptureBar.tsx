@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, CheckCircle2, ArrowRight, Loader2 } from "lucide-react";
+import { motion } from "framer-motion";
+import { Mail, CheckCircle2, ArrowRight, Loader2, Sparkles } from "lucide-react";
 import { analytics } from "@/lib/analytics";
 
 export default function EmailCaptureBar() {
@@ -43,27 +44,48 @@ export default function EmailCaptureBar() {
 
   return (
     <section className="py-16 bg-navy-900 text-white relative overflow-hidden">
+      {/* Background Decorative Ambient Radial Glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-teal-500/10 via-transparent to-transparent pointer-events-none"></div>
+
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
-        <div className="space-y-2">
-          <span className="text-xs font-bold tracking-widest uppercase text-teal-400">
-            Stay Connected
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="space-y-2"
+        >
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-bold tracking-widest uppercase text-teal-400">
+            <Sparkles className="w-3.5 h-3.5 text-teal-400" />
+            <span>Stay Connected</span>
           </span>
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
             Get matched with the right clinical opportunity
           </h2>
           <p className="text-sm sm:text-base text-slate-300 max-w-xl mx-auto">
             Receive exclusive study openings, trial staffing alerts, and industry insights directly from our founder.
           </p>
-        </div>
+        </motion.div>
 
         {status === "success" ? (
-          <div className="inline-flex items-center gap-2 p-4 rounded-xl bg-teal-900/50 border border-teal-500/40 text-teal-200 text-sm">
-            <CheckCircle2 className="w-5 h-5 text-teal-400" />
-            <span>{message}</span>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="inline-flex items-center gap-2.5 p-4 rounded-2xl bg-teal-900/50 border border-teal-500/40 text-teal-200 text-sm shadow-lg"
+          >
+            <CheckCircle2 className="w-5 h-5 text-teal-400 shrink-0" />
+            <span className="font-medium">{message}</span>
+          </motion.div>
         ) : (
-          <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-3">
-            <div className="flex flex-col sm:flex-row items-center gap-2 bg-white/10 p-1.5 rounded-xl border border-white/20 backdrop-blur-md">
+          <motion.form
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+            onSubmit={handleSubmit}
+            className="max-w-xl mx-auto space-y-3"
+          >
+            <div className="flex flex-col sm:flex-row items-center gap-2 bg-white/10 hover:bg-white/15 p-1.5 rounded-2xl border border-white/20 focus-within:border-teal-400/60 focus-within:ring-2 focus-within:ring-teal-400/20 backdrop-blur-md transition-all shadow-lg">
               <div className="relative flex-grow w-full">
                 <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                 <input
@@ -72,14 +94,14 @@ export default function EmailCaptureBar() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your work email..."
                   required
-                  className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-transparent text-sm text-white placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-teal-400"
+                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-transparent text-sm text-white placeholder:text-slate-400 focus:outline-none"
                 />
               </div>
 
               <select
                 value={role}
                 onChange={(e) => setRole(e.target.value)}
-                className="w-full sm:w-auto px-3 py-2.5 rounded-lg bg-navy-800 text-xs font-medium text-slate-200 border border-white/10 focus:outline-none"
+                className="w-full sm:w-auto px-3 py-2.5 rounded-xl bg-navy-850 hover:bg-navy-800 text-xs font-semibold text-slate-200 border border-white/10 focus:outline-none cursor-pointer transition-colors"
               >
                 <option value="Professional">CRA / Professional</option>
                 <option value="Sponsor">Sponsor / CRO</option>
@@ -88,7 +110,7 @@ export default function EmailCaptureBar() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="w-full sm:w-auto px-5 py-2.5 rounded-lg bg-teal-500 hover:bg-teal-400 text-navy-950 font-bold text-xs uppercase tracking-wide transition-colors flex items-center justify-center gap-1.5 shrink-0"
+                className="btn-shimmer-wrap btn-press w-full sm:w-auto px-6 py-2.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-navy-950 font-bold text-xs uppercase tracking-wide transition-all flex items-center justify-center gap-1.5 shrink-0 shadow-md"
               >
                 {status === "loading" ? (
                   <Loader2 className="w-4 h-4 animate-spin" />
@@ -101,12 +123,12 @@ export default function EmailCaptureBar() {
               </button>
             </div>
             {status === "error" && (
-              <p className="text-xs text-rose-300">{message}</p>
+              <p className="text-xs text-rose-300 font-medium">{message}</p>
             )}
             <p className="text-[11px] text-slate-400">
               No spam. Unsubscribe anytime. We respect your privacy.
             </p>
-          </form>
+          </motion.form>
         )}
       </div>
     </section>
