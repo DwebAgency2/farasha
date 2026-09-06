@@ -13,7 +13,7 @@ export default function ValueProps() {
         "Amanda spent 13 years in trial operations at CROs and academic cancer centers. When we vet a CRA, we know exactly what we're looking at — from monitoring report rigor to site protocol compliance.",
       accent: "hover:border-teal-500/50",
       iconColor: "text-teal-600 bg-teal-50 group-hover:bg-teal-600 group-hover:text-white",
-      topBorder: "from-teal-500 to-teal-400",
+      topBorder: "bg-teal-600",
     },
     {
       icon: Handshake,
@@ -23,7 +23,7 @@ export default function ValueProps() {
         "We stay with both sides after the placement — because a hire that doesn't stick costs everyone. Our measure of success is month six, not day one.",
       accent: "hover:border-gold-500/50",
       iconColor: "text-gold-600 bg-gold-50 group-hover:bg-gold-500 group-hover:text-white",
-      topBorder: "from-gold-500 to-gold-400",
+      topBorder: "bg-gold-500",
     },
     {
       icon: Zap,
@@ -33,7 +33,7 @@ export default function ValueProps() {
         "You talk to the person making the match — no junior account managers, no runaround, no waiting a week for an unvetted stack of resumes.",
       accent: "hover:border-navy-500/50",
       iconColor: "text-navy-700 bg-navy-50 group-hover:bg-navy-900 group-hover:text-white",
-      topBorder: "from-navy-700 to-navy-500",
+      topBorder: "bg-navy-900",
     },
   ];
 
@@ -89,7 +89,7 @@ export default function ValueProps() {
                 className={`card-lift group relative rounded-2xl p-8 bg-white border border-slate-200/90 ${v.accent} shadow-sm flex flex-col justify-between overflow-hidden cursor-default`}
               >
                 {/* Top Colored Accent Stripe on Hover */}
-                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${v.topBorder} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                <div className={`absolute top-0 left-0 right-0 h-1 ${v.topBorder} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
 
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">

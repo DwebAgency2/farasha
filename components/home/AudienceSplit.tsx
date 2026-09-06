@@ -36,7 +36,7 @@ export default function AudienceSplit() {
             className="card-lift group relative rounded-3xl bg-white border border-slate-200/90 hover:border-teal-500/40 p-8 sm:p-10 shadow-sm flex flex-col justify-between space-y-8 overflow-hidden"
           >
             {/* Top Accent Stripe */}
-            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-navy-900 via-teal-700 to-teal-500"></div>
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-navy-900"></div>
 
             <div className="space-y-6">
               <div className="flex items-center justify-between">
@@ -93,7 +93,7 @@ export default function AudienceSplit() {
             className="card-lift group relative rounded-3xl bg-white border border-slate-200/90 hover:border-gold-500/40 p-8 sm:p-10 shadow-sm flex flex-col justify-between space-y-8 overflow-hidden"
           >
             {/* Top Accent Stripe */}
-            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-teal-600 via-gold-500 to-gold-400"></div>
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-teal-600"></div>
 
             <div className="space-y-6">
               <div className="flex items-center justify-between">

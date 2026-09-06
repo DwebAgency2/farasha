@@ -25,7 +25,6 @@ export default function FounderTeaser() {
                 fill
                 className="object-cover object-top filter brightness-95 group-hover:scale-105 transition-transform duration-500 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-navy-950"></div>
             </div>
 
             {/* Founder Bio Col */}

@@ -119,9 +119,6 @@ export default function Hero() {
             className="lg:col-span-5"
           >
             <div className="relative mx-auto max-w-md">
-              {/* Decorative Pulsing Glow */}
-              <div className="absolute -inset-1.5 bg-gradient-to-r from-teal-500/25 via-teal-400/15 to-gold-500/25 rounded-3xl blur-2xl animate-pulse-glow pointer-events-none"></div>
-
               {/* Floating Trust Badge */}
               <div className="absolute -top-4 -right-3 z-20 animate-float">
                 <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-navy-900/90 border border-teal-400/40 backdrop-blur-md shadow-xl text-[11px] font-bold text-white">
