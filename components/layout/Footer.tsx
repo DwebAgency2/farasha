@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Mail, Phone, MapPin, Linkedin, ShieldCheck } from "lucide-react";
 
 export default function Footer() {
@@ -10,16 +9,19 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="relative h-12 w-12 flex-shrink-0 filter invert brightness-150">
+              <div className="relative h-14 w-14 flex-shrink-0">
                 <img
-                  src="/images/farasha-butterfly.png"
+                  src="/images/Farasha Logo icon Transparent BG.png"
                   alt="FarashaCRP Emblem"
                   className="w-full h-full object-contain"
                 />
               </div>
               <div>
                 <span className="text-xl font-bold tracking-tight text-white leading-none block">
-                  Farasha<span className="text-teal-400 font-normal text-sm ml-1">CRP</span>
+                  Farasha
+                  <span className="text-teal-400 font-normal text-sm ml-1">
+                    CRP
+                  </span>
                 </span>
                 <span className="text-[10px] uppercase tracking-widest text-slate-400 font-medium">
                   Clinical Research Partners, LLC
@@ -28,7 +30,9 @@ export default function Footer() {
             </div>
 
             <p className="text-slate-400 text-sm max-w-md leading-relaxed">
-              Boutique by design. Clinical by nature. Founded and led by Amanda Sanchez, RN, CCRP — placing vetted CRAs, CTMs, and CTAs nationwide.
+              Boutique by design. Clinical by nature. Founded and led by Amanda
+              Sanchez, RN, CCRP — placing vetted CRAs, CTMs, and CTAs
+              nationwide.
             </p>
 
             <div className="pt-2 flex items-center gap-3 text-xs text-gold-400 font-medium">
@@ -44,22 +48,34 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-sm text-slate-400">
               <li>
-                <Link href="/" className="hover:text-teal-300 transition-colors">
+                <Link
+                  href="/"
+                  className="hover:text-teal-300 transition-colors"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-teal-300 transition-colors">
+                <Link
+                  href="/about"
+                  className="hover:text-teal-300 transition-colors"
+                >
                   About Amanda Sanchez
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-teal-300 transition-colors">
+                <Link
+                  href="/services"
+                  className="hover:text-teal-300 transition-colors"
+                >
                   Services Breakdown
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-teal-300 transition-colors">
+                <Link
+                  href="/contact"
+                  className="hover:text-teal-300 transition-colors"
+                >
                   Contact & Consultations
                 </Link>
               </li>
@@ -78,7 +94,9 @@ export default function Footer() {
                   className="hover:text-teal-300 transition-colors flex items-center gap-1.5"
                 >
                   <span>Sponsors & CROs</span>
-                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-teal-900/80 text-teal-300">Staffing</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-teal-900/80 text-teal-300">
+                    Staffing
+                  </span>
                 </Link>
               </li>
               <li>
@@ -87,7 +105,9 @@ export default function Footer() {
                   className="hover:text-teal-300 transition-colors flex items-center gap-1.5"
                 >
                   <span>CR Professionals</span>
-                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-navy-800 text-slate-300">Careers</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-navy-800 text-slate-300">
+                    Careers
+                  </span>
                 </Link>
               </li>
               <li>
@@ -118,7 +138,10 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-gold-400 shrink-0" />
-                <a href="tel:7372730740" className="hover:text-white transition-colors">
+                <a
+                  href="tel:7372730740"
+                  className="hover:text-white transition-colors"
+                >
                   (737) 273-0740
                 </a>
               </li>
@@ -144,11 +167,14 @@ export default function Footer() {
         {/* Bottom Strip */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <p className="text-center md:text-left">
-            People. Research. Possibility. &nbsp;·&nbsp; © 2026 Farasha Clinical Research Partners, LLC. All Rights Reserved.
+            People. Research. Possibility. &nbsp;·&nbsp; © 2026 Farasha Clinical
+            Research Partners, LLC. All Rights Reserved.
           </p>
           <div className="flex items-center gap-2 text-slate-400 text-xs">
             <span>Powered by</span>
-            <span className="text-slate-300 font-medium">AssuredPixel Digital Studio</span>
+            <span className="text-slate-300 font-medium">
+              AssuredPixel Digital Studio
+            </span>
           </div>
         </div>
       </div>

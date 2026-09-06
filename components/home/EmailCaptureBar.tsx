@@ -109,10 +109,11 @@ export default function EmailCaptureBar() {
               <select
                 value={role}
                 onChange={(e) => setRole(e.target.value)}
-                className="w-full sm:w-auto px-3 py-2.5 rounded-xl bg-navy-850 hover:bg-navy-800 text-xs font-semibold text-slate-200 border border-white/10 focus:outline-none cursor-pointer transition-colors"
+                className="w-full sm:w-auto px-3 py-2.5 rounded-xl bg-navy-800 hover:bg-navy-700 text-white text-xs font-semibold border border-white/10 focus:outline-none cursor-pointer transition-colors"
+                style={{ colorScheme: "dark" }}
               >
-                <option value="Professional">CRA / Professional</option>
-                <option value="Sponsor">Sponsor / CRO</option>
+                <option value="Professional" className="bg-navy-800 text-white">CRA / Professional</option>
+                <option value="Sponsor" className="bg-navy-800 text-white">Sponsor / CRO</option>
               </select>
 
               <button

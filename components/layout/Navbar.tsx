@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone, Mail, ArrowRight } from "lucide-react";
 
@@ -68,18 +67,21 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-18">
-            {/* Logo without box */}
+            {/* Logo */}
             <Link href="/" className="flex items-center gap-3.5 group py-1">
-              <div className="relative h-12 w-12 flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+              <div className="relative h-14 w-14 flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
                 <img
-                  src="/images/farasha-butterfly.png"
+                  src="/images/Farasha Logo icon Transparent BG.png"
                   alt="FarashaCRP Logo"
                   className="w-full h-full object-contain"
                 />
               </div>
               <div className="flex flex-col">
                 <span className="text-2xl font-extrabold tracking-tight text-navy-900 leading-none group-hover:text-teal-700 transition-colors">
-                  Farasha<span className="text-teal-600 font-semibold text-base ml-1">CRP</span>
+                  Farasha
+                  <span className="text-teal-600 font-semibold text-base ml-1">
+                    CRP
+                  </span>
                 </span>
                 <span className="text-[10px] uppercase tracking-widest text-slate-500 font-semibold mt-1">
                   Clinical Research Partners

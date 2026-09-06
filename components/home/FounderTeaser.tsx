@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, Award, HeartPulse } from "lucide-react";
 
@@ -19,12 +18,13 @@ export default function FounderTeaser() {
           <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
             {/* Founder Image Col */}
             <div className="lg:col-span-5 relative h-96 lg:h-full min-h-[460px] bg-navy-900 overflow-hidden">
-              <Image
-                src="/images/dr-amanda-2.jpg"
-                alt="Amanda Sanchez, RN, CCRP"
-                fill
-                className="object-cover object-top filter brightness-95 group-hover:scale-105 transition-transform duration-500 ease-out"
+              <img
+                src="/images/dr-amanda-1.jpg"
+                alt="Amanda Sanchez, RN, CCRP — Founder of Farasha CRP"
+                className="absolute inset-0 w-full h-full object-cover object-top brightness-95 group-hover:scale-105 transition-transform duration-500 ease-out"
               />
+              {/* Functional overlay: blends photo edge into dark card on desktop */}
+              <div className="absolute inset-0 bg-[linear-gradient(to_top,#0a0f1e_0%,transparent_45%)] lg:bg-[linear-gradient(to_right,transparent_0%,#0a0f1e_100%)]"></div>
             </div>
 
             {/* Founder Bio Col */}
